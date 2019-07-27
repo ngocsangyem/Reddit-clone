@@ -1,0 +1,27 @@
+<div class="article">
+  <div class="article-point">
+    <div class="value">
+      {{article.votes}}
+    </div>
+    <div class="label">
+      points
+    </div>
+  </div>
+  <div class="article-content">
+    <div class="article-title">
+      <!-- <small href="" class="article-title-link">Angular <small>(angular.io)</small></a> -->
+      <a href={{article.link}} class="article-title-link"
+        target="_blank">{{article.title}}<small>{{article.domain()}}</small></a>
+    </div>
+    <div class="article-action">
+      <a href="javascript:void(0)" class="article-up-vote article-action-btn" (click)="voteUp()">
+        <i class="fas fa-arrow-up"></i>
+        upvote
+      </a>
+      <a href="javascript:void(0)" class="article-down-vote article-action-btn" (click)="voteDown()">
+        <i class="fas fa-arrow-down"></i>
+        downvote
+      </a>
+    </div>
+  </div>
+</div>
